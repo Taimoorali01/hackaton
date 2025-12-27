@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathametic Quiz | Taimoor</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1 class="animate__animated animate__fadeInDown">Mathematic Quiz</h1>
+    </header>
+
+    <main>
+        <div id="view-start" class="main-container animate__animated animate__zoomIn">
+            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 20px;"></i>
+            <h2>Ready to Start?</h2>
+            <p style="color: var(--faded-white); margin: 15px 0;">Enter total questions</p>
+            <input type="number" id="input-qty" class="math-input" value="5" min="1">
+            <button class="primary-btn" onclick="startQuiz()">Begin Quiz</button>
+        </div>
+
+        <div id="view-quiz" class="main-container hidden">
+            <span id="label-progress" class="progress-label"></span>
+            <div id="math-display"></div>
+            
+            <input type="number" id="input-ans" class="math-input" placeholder="?">
+            
+            <div id="feedback-text" class="feedback-line"></div>
+            
+            <button class="primary-btn" id="btn-submit" onclick="handleLogic()">
+                Submit Answer <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+            </button>
+        </div>
+
+        <div id="view-result" class="main-container hidden animate__animated animate__fadeInUp">
+            <i class="fas fa-star" style="font-size: 3rem; color: #fbbf24; margin-bottom: 20px;"></i>
+            <h2>Final Score</h2>
+            <div id="score-text" style="font-size: 3rem; font-weight: 900; margin: 20px 0;"></div>
+            <button class="primary-btn" onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </main>
+
+    <footer>
+        HACKATHON PROJECT BY <span style="color: white; font-weight: bold;">TAIMOOR</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
